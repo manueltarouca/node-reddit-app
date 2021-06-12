@@ -17,7 +17,7 @@ const client = new Snoowrap(creds);
 //const client = new Snoostorm(creds);
 
 const streamOpts = {
-  subreddit: 'censugal',
+  subreddit: 'portugal',
   results: 25,
   pollTime: 5000
 };
