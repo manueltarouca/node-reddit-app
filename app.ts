@@ -17,7 +17,7 @@ const client = new Snoowrap(creds);
 //const client = new Snoostorm(creds);
 
 const streamOpts = {
-  subreddit: 'portugal',
+  subreddit: process.env.SUBREDDIT,
   results: 25,
   pollTime: 5000
 };
@@ -30,7 +30,7 @@ function mirror() {
     //console.log(submission);
     if (submission.is_crosspostable) {
       (<any>submission).submitCrosspost({
-        subredditName: 'censugal',
+        subredditName: process.env.MIRROR_SUBREDDIT,
         title: submission.title,
         sendReplies: false,
         resubmit: false
